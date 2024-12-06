@@ -13,11 +13,8 @@ list1.sort()
 list2.sort()
 
 if len(list1) == len(list2):
-    array_length = len(list1)
-    for i in range(array_length):
-        calculation_array = [list1[i], list2[i]]
-        calculation_array.sort()
-        final_answer += calculation_array[1] - calculation_array[0]
+    for i in range(len(list1)):
+        final_answer += abs(list1[i] - list2[i])
 else:
     print("number of elements in list1 and list2 are not equal unable to do calculations")
 
